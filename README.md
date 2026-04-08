@@ -1,27 +1,27 @@
-# 📊 Algorithm Performance Analysis: K-Closest Elements
+# 📚 CS201: Fundamental Structures of Computer Science I
 
-This repository contains an empirical performance analysis of different search algorithms. The objective of this project is to implement, benchmark, and theoretically analyze algorithms that find the **$K$ closest elements** to a target value within a sorted array.
+This repository contains my personal implementations and project solutions for the **CS201: Fundamental Structures of Computer Science I** course at Bilkent University.
 
-## 🎯 Project Overview
-Instead of relying solely on theoretical time complexities, this project actively measures the real-world execution time (in milliseconds) of three distinct search algorithms under varying workloads (array sizes from $N=2^3$ to $2^{15}$ and different $K$ proportions). 
+> 💡 **Core Philosophy:** All data structures and algorithms in this repository were developed **without** the C++ Standard Template Library (STL). Every project focus on deep-level pointer manipulation, manual dynamic memory management, and the implementation of fundamental logic from the ground up.
 
-The implemented algorithms include:
-1. **Linear Search ($O(N)$):** Iterates through the array to find the target and expands linearly.
-2. **Binary Search ($O(\log N)$):** Utilizes the divide-and-conquer approach to locate the target position before expanding to find the $K$ closest values.
-3. **Jump Search ($O(\sqrt{N})$):** Jumps ahead by optimal block sizes ($m = \sqrt{N}$) to find the bounds, followed by a linear scan.
+---
 
-## 📈 Benchmarking & Analysis
-The core of this project is the benchmarking engine (`main.cpp`), which dynamically generates test cases, prevents caching biases, and calculates the precise elapsed time using the C++ `<ctime>` library. 
+### 📁 Repository Contents
 
-* **Testing Scale:** Averaged over 50,000 repetitions per algorithm to ensure statistical significance and eliminate CPU spike anomalies.
-* **Analysis Report:** A comprehensive PDF report (`Report.pdf`) is included in this repository. It features:
-  * Detailed tables of raw execution times.
-  * Plotted performance graphs visualizing the scalability of Linear vs. Binary vs. Jump search.
-  * A comparative discussion matching the empirical results against the theoretical Big-O expectations.
+Each folder contains the source code, header files, and a detailed README explaining the specific implementation.
 
-## 🛠️ Tech Stack
-* **Language:** C++
-* **Key Concepts:** Algorithm Design, Performance Benchmarking, Time Complexity Analysis, Array Manipulation.
+| Directory | Core Concept | Description |
+| :--- | :--- | :--- |
+| **[HW1: Time Travel Engine](./HW1-Time-Travel-Engine)** | Stacks (LIFO) | A complex timeline simulation using custom stacks to manage "Past", "Future", and "Time Stone" checkpoints. |
+| **[HW2: Search Benchmarking](./HW2-Algorithm-Benchmarking)** | Performance Analysis | A rigorous empirical study comparing Linear, Binary, and Jump Search across $2^{15}$ elements with detailed Big-O analysis. |
+| **[HW3: Bilkent Tourism](./HW3-Bilkent-Tourism-System)** | Multi-Linked Lists | A hierarchical management system for bus lines, stops, and drivers using nested linked list architectures. |
+
+
+
+### 🛠️ Key Technical Skills Demonstrated
+* **Manual Memory Management:** Strict use of constructors, destructors, and pointers to ensure zero memory leaks.
+* **Algorithm Benchmarking:** Real-world execution time measurement using `<ctime>` and matching empirical results with theoretical Big-O expectations.
+* **Low-Level Data Structures:** Implementing Stacks and Multi-layered Linked Lists without external library dependencies.
 
 ---
 *Disclaimer: This repository is intended to serve as a personal portfolio. Direct copying of these solutions for academic submissions is a violation of the Bilkent University Honor Code.*
